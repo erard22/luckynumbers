@@ -4,15 +4,13 @@ import java.lang.reflect.Field;
 import java.util.Random;
 import java.util.concurrent.atomic.AtomicLong;
 
-/**
- * Created by michel on 04.12.16.
- */
+
 public class Main {
 
     public static void main(String... args) throws Exception {
-
+        long originalSeed = 105390683042495L;
         Random r = new Random();
-        cheatMyRandom(r, Long.parseLong(args[0]));
+        cheatMyRandom(r, originalSeed);
         r.ints(0, 42).distinct().limit(6).forEach(System.out::println);
     }
 
